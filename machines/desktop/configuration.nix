@@ -11,6 +11,7 @@
 
       ../../modules/basics.nix
       ../../modules/locales.nix
+      ../../modules/networking.nix
       ../../modules/users.nix
     ];
 
@@ -28,15 +29,8 @@
   boot.loader.grub.enableCryptodisk=true;
 
   boot.initrd.luks.devices."luks-d685f30e-7599-44cd-b44e-5b0741ed0715".keyFile = "/crypto_keyfile.bin";
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+  networking.hostName = "nixos-desktop"; # Define your hostname.
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -103,9 +97,6 @@
   # };
 
   # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
