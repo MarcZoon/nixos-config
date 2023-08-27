@@ -20,6 +20,17 @@
                 userName = "Marc Zoon";
                 userEmail = "git@marczoon.nl";
             };
+
+            zsh = {
+                enable = true;
+                shellAliases = {
+                    update = "sudo  nixos-rebuild switch";
+                };
+                oh-my-zsh = {
+                    enable = true;
+                    theme = "robbyrussell";
+                };
+            };
         };
     };
 }
