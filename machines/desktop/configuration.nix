@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
 
       ../../modules/basics.nix
+      ../../modules/home-manager.nix
+      ../../modules/home-manager-marc.nix
       ../../modules/locales.nix
       ../../modules/networking.nix
       ../../modules/users.nix
@@ -75,8 +77,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    discord
     firefox
+    obsidian
     shutter
+    spotify
+    telegram-desktop
     thunderbird
     vscode
   ];
