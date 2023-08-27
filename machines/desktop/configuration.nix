@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
 
       ../../modules/basics.nix
+      ../../modules/gnome.nix
       ../../modules/home-manager.nix
       ../../modules/home-manager-marc.nix
       ../../modules/locales.nix
@@ -33,13 +34,6 @@
   boot.initrd.luks.devices."luks-d685f30e-7599-44cd-b44e-5b0741ed0715".keyFile = "/crypto_keyfile.bin";
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {

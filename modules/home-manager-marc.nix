@@ -5,7 +5,9 @@
     home-manager.users.marc = {
         home = {
             packages = with pkgs; [
-
+                discord
+                obsidian
+                telegram-desktop
             ];
             stateVersion = "23.05";
         };
